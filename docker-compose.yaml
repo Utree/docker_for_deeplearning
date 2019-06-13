@@ -1,0 +1,17 @@
+# docker-composeのバージョン
+version: '3'
+
+services:
+  notebook:
+    # 使用するイメージ
+    # image: jupyter/base-notebook
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # [ホストポート]:[コンテナポート]
+    ports:
+      - "8888:8888"
+    # stopされるまでrestartし続ける
+    restart: unless-stopped
+    # 実行
+    command: start.sh jupyter lab --NotebookApp.token='aaa'
