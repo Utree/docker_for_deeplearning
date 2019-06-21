@@ -6,3 +6,4 @@ RUN pip install matplotlib
 RUN pip install tensorflow
 RUN pip install keras
 RUN pip install pandas
+RUN pip install sklearn
