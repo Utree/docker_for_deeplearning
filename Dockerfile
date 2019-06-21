@@ -5,3 +5,4 @@ FROM $BASE_CONTAINER
 RUN pip install matplotlib
 RUN pip install tensorflow
 RUN pip install keras
+RUN pip install pandas
